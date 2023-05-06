@@ -1,10 +1,10 @@
+import Layout from "./components/layout";
+import Footer from "./components/layout/footer";
+import Header from "./components/layout/header";
+
 function App() {
   return (
-    <div className="App">
-      <header>
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      </header>
-    </div>
+    <Layout header={<Header />} main={<h1>Home</h1>} footer={<Footer />} />
   );
 }
 
