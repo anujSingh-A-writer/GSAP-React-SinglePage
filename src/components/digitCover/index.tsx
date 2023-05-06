@@ -3,7 +3,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 const DigitCover = () => {
   return (
     <div
-      className={`${layout.flex.directionCol.spaceBetween} bg-lime-300 px-28`}
+      className={`${layout.flex.directionCol.justifyBetween} bg-lime-300 px-28`}
     >
       <div className={`${layout.flex.directionRow.itemCenter}`}>
         <h1 className="text-[14rem] font-semibold w-1/2">Digit</h1>

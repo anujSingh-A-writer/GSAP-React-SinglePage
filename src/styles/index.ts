@@ -9,8 +9,11 @@ export const layout = {
       itemJustifyCenter: "flex flex-row items-center justify-center",
     },
     directionCol: {
-      spaceBetween: "flex flex-col justify-between",
-      itemscenter: "flex flex-col items-center",
+      justifyBetween: "flex flex-col justify-between",
+      justifyStart: "flex flex-col justify-start",
+      justifyEnd: "flex flex-col justify-end",
+      itemsCenter: "flex flex-col items-center",
+      itemsEnd: "flex flex-col items-end",
       itemEndspaceBetween: "flex flex-col items-end justify-between",
       itemsJustifyCenter: "flex flex-col items-center justify-center",
     },

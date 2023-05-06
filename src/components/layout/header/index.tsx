@@ -1,6 +1,6 @@
 import { layout } from "../../../styles";
 import { MENU_ITEMS } from "./constants";
-import logo from "../../../assests/kiltx.png";
+import logo from "../../../assets/kiltx.png";
 
 const Header = () => {
   return (
@@ -8,10 +8,10 @@ const Header = () => {
       <div
         className={`${layout.flex.directionRow.itemCenterSpaceBetween} h-full`}
       >
-        <div>
+        <>
           <img width={120} height={120} src={logo} alt="logo" />
-        </div>
-        <div>
+        </>
+        <>
           <ul className={`${layout.flex.directionRow.itemCenter} gap-14`}>
             {MENU_ITEMS.map((eachItem) => (
               <li className={`hover:font-semibold text-2xl`}>
@@ -19,12 +19,12 @@ const Header = () => {
               </li>
             ))}
           </ul>
-        </div>
-        <div>
+        </>
+        <>
           <button className="bg-blue-400 text-white px-8 py-4 rounded text-xl">
             Learn more
           </button>
-        </div>
+        </>
       </div>
     </header>
   );

@@ -1,4 +1,4 @@
-import logo from "../../../assests/kiktX.png";
+import logo from "../../../assets/kiktX.png";
 import { layout } from "../../../styles";
 import { FOOTER_CONTENTS, SOCIAL_LINKS } from "./constants";
 
@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="my-20">
         <div className={layout.flex.directionRow.itemCenterSpaceBetween}>
           <div
-            className={`w-1/3 ${layout.flex.directionCol.spaceBetween} gap-10`}
+            className={`w-1/3 ${layout.flex.directionCol.justifyBetween} gap-10`}
           >
             <img height={200} width={200} alt="logo" src={logo} />
             <p className="text-xl w-3/4">
@@ -22,7 +22,7 @@ const Footer = () => {
           >
             {FOOTER_CONTENTS.map((eachItem) => (
               <div
-                className={`w-1/3 ${layout.flex.directionCol.spaceBetween} gap-6`}
+                className={`w-1/3 ${layout.flex.directionCol.justifyBetween} gap-6`}
               >
                 <h1 className="text-2xl">{eachItem.title}</h1>
                 <ul className="text-xl">
