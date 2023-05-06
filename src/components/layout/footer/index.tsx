@@ -5,7 +5,7 @@ import { FOOTER_CONTENTS, SOCIAL_LINKS } from "./constants";
 const Footer = () => {
   return (
     <footer className="bg-black px-28 text-white">
-      <hr className="my-20" />
+      <hr className="my-32" />
       <div className="my-20">
         <div className={layout.flex.directionRow.itemCenterSpaceBetween}>
           <div
