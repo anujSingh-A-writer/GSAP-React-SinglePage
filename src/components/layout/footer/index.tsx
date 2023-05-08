@@ -1,15 +1,14 @@
-import logo from "../../../assests/kiktX.png";
+import logo from "../../../assets/kiktX.png";
 import { layout } from "../../../styles";
 import { FOOTER_CONTENTS, SOCIAL_LINKS } from "./constants";
 
 const Footer = () => {
   return (
-    <footer className="bg-black px-28 text-white">
-      <hr className="my-20" />
-      <div className="my-20">
+    <footer className="footerDiv bg-black px-28 text-white h-screen overflow-hidden">
+      <div className="pb-20 pt-28 border-t border-t-gray-300">
         <div className={layout.flex.directionRow.itemCenterSpaceBetween}>
           <div
-            className={`w-1/3 ${layout.flex.directionCol.spaceBetween} gap-10`}
+            className={`w-1/3 ${layout.flex.directionCol.justifyBetween} gap-10`}
           >
             <img height={200} width={200} alt="logo" src={logo} />
             <p className="text-xl w-3/4">
@@ -22,7 +21,7 @@ const Footer = () => {
           >
             {FOOTER_CONTENTS.map((eachItem) => (
               <div
-                className={`w-1/3 ${layout.flex.directionCol.spaceBetween} gap-6`}
+                className={`w-1/3 ${layout.flex.directionCol.justifyBetween} gap-6`}
               >
                 <h1 className="text-2xl">{eachItem.title}</h1>
                 <ul className="text-xl">
@@ -45,7 +44,7 @@ const Footer = () => {
             </button>
           </div>
         </div>
-        <div className={`${layout.flex.directionRow.justifyEnd} gap-20 my-10`}>
+        <div className={`${layout.flex.directionRow.justifyEnd} gap-20 py-10`}>
           <div
             className={`${layout.flex.directionRow.itemCenterSpaceBetween} gap-5`}
           >
