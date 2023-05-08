@@ -4,9 +4,9 @@ import { FOOTER_CONTENTS, SOCIAL_LINKS } from "./constants";
 
 const Footer = () => {
   return (
-    <footer className="bg-black px-28 text-white">
-      <hr className="my-32" />
-      <div className="my-20">
+    <footer className="footerDiv bg-black px-28 text-white">
+      <hr className="pt-32" />
+      <div className="py-20">
         <div className={layout.flex.directionRow.itemCenterSpaceBetween}>
           <div
             className={`w-1/3 ${layout.flex.directionCol.justifyBetween} gap-10`}
@@ -45,7 +45,7 @@ const Footer = () => {
             </button>
           </div>
         </div>
-        <div className={`${layout.flex.directionRow.justifyEnd} gap-20 my-10`}>
+        <div className={`${layout.flex.directionRow.justifyEnd} gap-20 py-10`}>
           <div
             className={`${layout.flex.directionRow.itemCenterSpaceBetween} gap-5`}
           >
