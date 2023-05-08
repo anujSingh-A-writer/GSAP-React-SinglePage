@@ -3,8 +3,8 @@ import { PROFILE_LIST } from "./constants";
 
 const TeamWriter = () => {
   return (
-    <div
-      className={`teamWriterDiv ${layout.flex.directionRow.itemCenter} bg-blue-500 text-white overflow-hidden h-[80vh] my-56`}
+    <section
+      className={`teamWriterDiv ${layout.flex.directionRow.itemCenter} bg-blue-500 text-white overflow-hidden my-56`}
     >
       <div
         className={`${layout.flex.directionCol.justifyStart} gap-10 py-36 pl-28 w-1/2`}
@@ -58,7 +58,7 @@ const TeamWriter = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

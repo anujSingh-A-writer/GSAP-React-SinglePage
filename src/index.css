@@ -14,3 +14,12 @@ body {
   justify-content: space-between;
   height: 100%;
 }
+
+section,
+footer {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}

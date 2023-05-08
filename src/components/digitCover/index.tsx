@@ -2,10 +2,10 @@ import { layout } from "../../styles";
 import { FiArrowUpRight } from "react-icons/fi";
 const DigitCover = () => {
   return (
-    <div
+    <section
       className={`digitDiv ${layout.flex.directionCol.justifyBetween} bg-lime-300 px-28 overflow-hidden`}
     >
-      <div className={`${layout.flex.directionRow.itemCenter}`}>
+      <div className={`${layout.flex.directionRow.itemCenter} w-full`}>
         <h1 className="h1digit text-[14rem] font-semibold w-1/2">Digit</h1>
         <div className="buttonDigit w-1/2">
           <span
@@ -25,7 +25,7 @@ const DigitCover = () => {
         </div>
         <h1 className="h1digitCover text-[15rem] font-semibold w-1/2">Cover</h1>
       </div>
-    </div>
+    </section>
   );
 };
 

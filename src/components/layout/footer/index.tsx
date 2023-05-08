@@ -4,7 +4,7 @@ import { FOOTER_CONTENTS, SOCIAL_LINKS } from "./constants";
 
 const Footer = () => {
   return (
-    <footer className="footerDiv bg-black px-28 text-white">
+    <footer className="footerDiv bg-black px-28 text-white h-screen overflow-hidden">
       <hr className="pt-32" />
       <div className="py-20">
         <div className={layout.flex.directionRow.itemCenterSpaceBetween}>
