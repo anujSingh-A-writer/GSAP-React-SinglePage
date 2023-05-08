@@ -3,9 +3,10 @@ import { FiArrowUpRight } from "react-icons/fi";
 const DigitCover = () => {
   return (
     <section
-      className={`digitDiv ${layout.flex.directionCol.justifyBetween} bg-lime-300 px-28 overflow-hidden`}
+      id="section_two"
+      className={`${layout.flex.directionCol.justifyBetween} bg-lime-300 sm:px-5 xl:px-28 overflow-hidden !h-[80vh]`}
     >
-      <div className={`${layout.flex.directionRow.itemCenter} w-full`}>
+      <div className={`div1 ${layout.flex.directionRow.itemCenter} w-full`}>
         <h1 className="h1digit text-[14rem] font-semibold w-1/2">Digit</h1>
         <div className="buttonDigit w-1/2">
           <span
@@ -16,7 +17,7 @@ const DigitCover = () => {
           </span>
         </div>
       </div>
-      <div className={`${layout.flex.directionRow.itemCenter}`}>
+      <div className={`div2 ${layout.flex.directionRow.itemCenter}`}>
         <div className={`w-1/2`}>
           <p className="pdigit text-3xl w-11/12 text-left">
             Explore KILT's identity components, download the javascript SDK,

@@ -15,11 +15,9 @@ body {
   height: 100%;
 }
 
-section,
-footer {
-  height: 80vh;
+section {
+  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: black;
+  justify-content: center;
 }
