@@ -1,6 +1,37 @@
+import { useLayoutEffect } from "react";
 import { layout } from "../../styles";
 import { FiArrowUpRight } from "react-icons/fi";
-const DigitCover = () => {
+import { gsap } from "gsap";
+const DigitCover: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
+  props
+) => {
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      // Section two denotes Digit & Cover division. START
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: "#section_two",
+            start: "top 10%",
+            end: "bottom 10%",
+            scrub: true,
+            pin: true,
+          },
+        })
+        .from("#section_two .div1", {
+          x: window.innerWidth * 1,
+          opacity: 0,
+          scale: 0.5,
+        })
+        .from("#section_two .div2", {
+          x: window.innerWidth * -1,
+          opacity: 0,
+          scale: 0.1,
+        });
+      // Section two denotes Digit & Cover division. END
+    }, props.mainRef); // <- Scope!
+    return () => ctx.revert(); // <- Cleanup!
+  }, []);
   return (
     <section
       id="section_two"
