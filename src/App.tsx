@@ -5,21 +5,23 @@ import Header from "./components/layout/header";
 import TeamWriter from "./components/teamWriter";
 import DigitCover from "./components/digitCover";
 import Footer from "./components/layout/footer";
+import Layout from "./components/layout";
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
-
-  const main = useRef(null);
+  const mainRef = useRef(null);
 
   return (
-    <>
-      <Header />
-      <main ref={main} className="bg-black">
-        <TeamWriter mainRef={main} />
-        <DigitCover mainRef={main} />
-      </main>
-      <Footer />
-    </>
+    <Layout
+      header={<Header />}
+      main={
+        <main ref={mainRef} className="bg-black">
+          <TeamWriter mainRef={mainRef} />
+          <DigitCover mainRef={mainRef} />
+        </main>
+      }
+      footer={<Footer />}
+    />
   );
 }
 

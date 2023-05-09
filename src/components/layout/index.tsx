@@ -5,7 +5,7 @@ const Layout: React.FC<LayoutProps> = (props) => {
   return (
     <>
       {props.header}
-      <main>{props.main}</main>
+      {props.main}
       {props.footer}
     </>
   );

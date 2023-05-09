@@ -14,7 +14,7 @@ const DigitCover: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
             trigger: "#section_two",
             start: "top 10%",
             end: "bottom 10%",
-            scrub: true,
+            scrub: 1,
             pin: true,
           },
         })
