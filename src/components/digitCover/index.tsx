@@ -13,7 +13,7 @@ const DigitCover: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
           scrollTrigger: {
             trigger: "#section_two",
             start: "top 10%",
-            end: "bottom 10%",
+            end: "+=2500",
             scrub: 1,
             pin: true,
           },
