@@ -4,8 +4,8 @@ import { FOOTER_CONTENTS, SOCIAL_LINKS } from "./constants";
 
 const Footer = () => {
   return (
-    <footer className="footerDiv bg-black px-28 text-white h-screen overflow-hidden">
-      <div className="pb-20 pt-28 border-t border-t-gray-300">
+    <footer className="footerDiv bg-black px-28 text-white overflow-hidden">
+      <div className="pb-20 pt-28 mt-28 border-t border-t-gray-300">
         <div className={layout.flex.directionRow.itemCenterSpaceBetween}>
           <div
             className={`w-1/3 ${layout.flex.directionCol.justifyBetween} gap-10`}
