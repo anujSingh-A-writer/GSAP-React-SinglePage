@@ -2,6 +2,7 @@ import { useLayoutEffect } from "react";
 import { layout } from "../../styles";
 import { PROFILE_LIST } from "./constants";
 import { gsap } from "gsap";
+import { bottomToTop, getImageSelectorIds } from "./utils";
 
 const TeamWriter: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
   props
@@ -26,21 +27,9 @@ const TeamWriter: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
             each: 1,
           },
         })
-        .from("#section_one .p1", {
-          y: window.innerWidth * 1,
-          opacity: 0,
-          scale: 0.5,
-        })
-        .from("#section_one .p2", {
-          y: window.innerWidth * 1,
-          opacity: 0,
-          scale: 0.5,
-        })
-        .from("#section_one .b1", {
-          y: window.innerWidth * 1,
-          opacity: 0,
-          scale: 0.5,
-        });
+        .from("#section_one .p1", bottomToTop)
+        .from("#section_one .p2", bottomToTop)
+        .from("#section_one .b1", bottomToTop);
       // Right Div
       gsap
         .timeline({
@@ -52,38 +41,12 @@ const TeamWriter: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
           },
         })
         .fromTo(
-          [
-            "#section_one .imgdiv1 .img1",
-            "#section_one .imgdiv1 .img2",
-            "#section_one .imgdiv1 .img3",
-            "#section_one .imgdiv1 .img4",
-            "#section_one .imgdiv1 .img5",
-            "#section_one .imgdiv1 .img6",
-            "#section_one .imgdiv1 .img7",
-            "#section_one .imgdiv1 .img8",
-            "#section_one .imgdiv1 .img9",
-            "#section_one .imgdiv1 .img10",
-            "#section_one .imgdiv1 .img11",
-            "#section_one .imgdiv1 .img12",
-          ],
+          getImageSelectorIds(12, "section_one", "imgdiv1"),
           { y: "100%" },
           { y: "-100%", duration: 5, ease: "linear" }
         )
         .fromTo(
-          [
-            "#section_one .imgdiv2 .img1",
-            "#section_one .imgdiv2 .img2",
-            "#section_one .imgdiv2 .img3",
-            "#section_one .imgdiv2 .img4",
-            "#section_one .imgdiv2 .img5",
-            "#section_one .imgdiv2 .img6",
-            "#section_one .imgdiv2 .img7",
-            "#section_one .imgdiv2 .img8",
-            "#section_one .imgdiv2 .img9",
-            "#section_one .imgdiv2 .img10",
-            "#section_one .imgdiv2 .img11",
-            "#section_one .imgdiv2 .img12",
-          ],
+          getImageSelectorIds(12, "section_one", "imgdiv2"),
           { y: "-100%" },
           { y: "100%", duration: 5, ease: "linear" }
         );

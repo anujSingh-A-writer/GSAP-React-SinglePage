@@ -18,6 +18,7 @@ const DigitCover: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
             pin: true,
           },
         })
+        .from("#section_two", { opacity: 0 })
         .from("#section_two .div1", {
           x: window.innerWidth * 1,
           opacity: 0,
