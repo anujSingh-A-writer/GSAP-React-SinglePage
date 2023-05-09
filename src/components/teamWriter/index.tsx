@@ -21,7 +21,7 @@ const TeamWriter: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
             pin: true,
           },
         })
-        .from("#section_one .h1", {
+        .from("#section_one h1", {
           y: "70%",
           stagger: {
             each: 1,
@@ -29,7 +29,7 @@ const TeamWriter: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
         })
         .from("#section_one .p1", bottomToTop)
         .from("#section_one .p2", bottomToTop)
-        .from("#section_one .b1", bottomToTop);
+        .from("#section_one button", bottomToTop);
       // Right Div
       gsap
         .timeline({
@@ -63,7 +63,7 @@ const TeamWriter: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
       <div
         className={`div1 ${layout.flex.directionCol.justifyStart} gap-10 py-28 pl-28 w-1/2`}
       >
-        <h1 className="h1 text-8xl font-semibold">Kilt Team Writer</h1>
+        <h1 className="text-8xl font-semibold">Kilt Team Writer</h1>
         <div className={`${layout.flex.directionCol.justifyStart} gap-5`}>
           <p className="p1 text-2xl">
             With backgrounds in software media academia, government, enterprise
@@ -76,7 +76,7 @@ const TeamWriter: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
             hackathon to colla,
           </p>
         </div>
-        <button className="b1 w-fit bg-lime-300 text-black font-semibold px-8 py-4 rounded-lg text-xl">
+        <button className="w-fit bg-lime-300 text-black font-semibold px-8 py-4 rounded-lg text-xl">
           Learn more
         </button>
       </div>

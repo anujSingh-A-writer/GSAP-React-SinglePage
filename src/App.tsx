@@ -7,6 +7,7 @@ import DigitCover from "./components/digitCover";
 import Footer from "./components/layout/footer";
 import Layout from "./components/layout";
 import Resources from "./components/resources";
+import WelcomeKilt from "./components/welcome";
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
@@ -17,6 +18,7 @@ function App() {
       header={<Header />}
       main={
         <main ref={mainRef} className="bg-black">
+          <WelcomeKilt mainRef={mainRef} />
           <Resources mainRef={mainRef} />
           <TeamWriter mainRef={mainRef} />
           <DigitCover mainRef={mainRef} />
