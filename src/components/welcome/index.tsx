@@ -1,13 +1,46 @@
+import { gsap } from "gsap";
 import { layout } from "../../styles";
 import WelcomeCard from "./Card";
 import { WELCOME_CARD_DETAILS } from "./constants";
+import { useLayoutEffect } from "react";
+import { ANIMATIONS } from "../resources/constants";
 
 const WelcomeKilt: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
   props
 ) => {
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: "#section_welcomekilt",
+            start: "top top", //animation start at this point
+            end: "+=3000", //animation end at this point
+            scrub: 1,
+            pin: true,
+          },
+        })
+        .from("#section_welcomekilt .div1 h1", {
+          y: "30vh",
+          xPercent: 50,
+          scale: 2,
+        })
+        .from("#section_welcomekilt .div1 p", ANIMATIONS.BOTTOM_TO_TOP)
+        .from("#section_welcomekilt .div2", ANIMATIONS.BOTTOM_TO_TOP)
+        .from("#section_welcomekilt .div2 h1", ANIMATIONS.BOTTOM_TO_TOP)
+        .from("#section_welcomekilt .div2 p", ANIMATIONS.BOTTOM_TO_TOP);
+    }, props.mainRef); // <- Scope!
+    return () => ctx.revert(); // <- Cleanup!
+  }, []);
+
   return (
-    <section className="bg-blue-500 text-white flex-col justify-between py-10 px-28 gap-10">
-      <div className={`${layout.flex.directionCol.justifyStart} w-full gap-8`}>
+    <section
+      id="section_welcomekilt"
+      className="bg-blue-500 text-white flex-col justify-between py-10 px-28 gap-10"
+    >
+      <div
+        className={`div1 ${layout.flex.directionCol.justifyStart} w-full gap-8`}
+      >
         <h1 className="text-6xl font-semibold">
           Welcome to <span className="text-lime-300">KILT website</span>
         </h1>
@@ -19,7 +52,7 @@ const WelcomeKilt: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
         </p>
       </div>
       <div
-        className={`${layout.flex.directionRow.itemJustifyCenter} h-full gap-10`}
+        className={`div2 ${layout.flex.directionRow.itemJustifyCenter} h-full gap-10`}
       >
         {WELCOME_CARD_DETAILS.map((eachItem) => (
           <WelcomeCard

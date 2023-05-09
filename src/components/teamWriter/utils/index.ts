@@ -9,9 +9,3 @@ export const getImageSelectorIds = (
   }
   return array;
 };
-
-export const bottomToTop = {
-  y: window.innerWidth * 1,
-  opacity: 0,
-  scale: 0.5,
-};

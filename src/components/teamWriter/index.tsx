@@ -2,7 +2,8 @@ import { useLayoutEffect } from "react";
 import { layout } from "../../styles";
 import { PROFILE_LIST } from "./constants";
 import { gsap } from "gsap";
-import { bottomToTop, getImageSelectorIds } from "./utils";
+import { getImageSelectorIds } from "./utils";
+import { ANIMATIONS } from "../resources/constants";
 
 const TeamWriter: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
   props
@@ -27,9 +28,9 @@ const TeamWriter: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
             each: 1,
           },
         })
-        .from("#section_one .p1", bottomToTop)
-        .from("#section_one .p2", bottomToTop)
-        .from("#section_one button", bottomToTop);
+        .from("#section_one .p1", ANIMATIONS.BOTTOM_TO_TOP)
+        .from("#section_one .p2", ANIMATIONS.BOTTOM_TO_TOP)
+        .from("#section_one button", ANIMATIONS.BOTTOM_TO_TOP);
       // Right Div
       gsap
         .timeline({
