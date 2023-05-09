@@ -16,7 +16,7 @@ const TeamWriter: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
           scrollTrigger: {
             trigger: "#section_one",
             start: "top top", //animation start at this point
-            end: "bottom top", //animation end at this point
+            end: "+=2000", //animation end at this point
             scrub: 1,
             pin: true,
           },

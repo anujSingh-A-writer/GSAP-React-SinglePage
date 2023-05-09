@@ -6,6 +6,7 @@ export const layout = {
       justifyCenter: "flex flex-row justify-center",
       justifyEnd: "flex flex-row justify-end",
       justifyStart: "flex flex-row justify-start",
+      itemsCenterJustifyStart: "flex flex-row items-center justify-start",
       itemJustifyCenter: "flex flex-row items-center justify-center",
     },
     directionCol: {
