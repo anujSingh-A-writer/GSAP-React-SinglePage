@@ -9,24 +9,24 @@ export const RESOURCE_LIST = [
     preIcon: <HiOutlineArrowNarrowRight />,
     label: "Sporran Wallet",
     image: resourceImage1,
-    className: "w-2/5 h-1/2 p-2 rounded-xl border-2 border-blue-500",
+    className: "w-2/5 h-1/2 p-2",
   },
   {
     preIcon: <HiOutlineArrowNarrowRight />,
     label: "SocialKYC",
     image: resourceImage2,
-    className: "w-1/2 h-2/5 p-2 rounded-xl border-2 border-blue-500",
+    className: "w-1/2 h-2/5 p-2",
   },
   {
     preIcon: <HiOutlineArrowNarrowRight />,
     label: "Sporran wallet",
     image: resourceImage3,
-    className: "w-1/2 h-1/2 p-2 rounded-xl border-2 border-blue-500",
+    className: "w-1/2 h-1/2 p-2",
   },
   {
     preIcon: <HiOutlineArrowNarrowRight />,
     label: "DIDsign decentralized",
     image: resourceImage4,
-    className: "w-2/5 h-3/5 p-2 rounded-xl border-2 border-blue-500",
+    className: "w-1/3 h-3/5 p-2",
   },
 ];

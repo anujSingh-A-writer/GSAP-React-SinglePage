@@ -105,10 +105,14 @@ const Resources: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
           </ul>
         </div>
         <div
-          className={`${layout.flex.directionRow.itemJustifyCenter} content-around w-1/2 h-full flex-wrap gap-5`}
+          className={`${layout.flex.directionRow.itemJustifyCenter} content-around w-1/2 h-full flex-wrap`}
         >
           {RESOURCE_LIST.map((eachResource, index) => (
-            <div className={`img${index + 1} ${eachResource.className}`}>
+            <div
+              className={`img${index + 1} ${
+                eachResource.className
+              } rounded-xl border-2 border-blue-500 mx-2`}
+            >
               <div
                 className={`${layout.flex.directionRow.itemJustifyCenter} w-full h-full rounded-xl border-2 border-blue-500 overflow-hidden p-10`}
               >
