@@ -30,3 +30,21 @@ export const RESOURCE_LIST = [
     className: "w-1/3 h-3/5 p-2",
   },
 ];
+
+export const ANIMATIONS = {
+  LEFT_TO_RIGHT: {
+    x: window.innerWidth * -1,
+    opacity: 0,
+    scale: 0.1,
+  },
+  RIGHT_TO_LEFT: {
+    x: window.innerWidth * 1,
+    opacity: 0,
+    scale: 0.5,
+  },
+  BOTTOM_TO_TOP: {
+    y: window.innerWidth * 1,
+    opacity: 0,
+    scale: 0.5,
+  },
+};

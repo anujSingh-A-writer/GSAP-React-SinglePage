@@ -1,6 +1,6 @@
 import { useLayoutEffect } from "react";
 import { layout } from "../../styles";
-import { RESOURCE_LIST } from "./constants";
+import { ANIMATIONS, RESOURCE_LIST } from "./constants";
 import { gsap } from "gsap";
 
 const Resources: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
@@ -19,55 +19,18 @@ const Resources: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
           },
         })
         .from("#section_resource .div1 h1", {
-          y: window.innerWidth * 1,
-          opacity: 0,
-          scale: 0.5,
+          y: "30vh",
+          scale: 2,
         })
-        .from("#section_resource .div1 p", {
-          y: window.innerWidth * 1,
-          opacity: 0,
-          scale: 0.5,
-        })
-        .from("#section_resource .div2 .label1", {
-          x: window.innerWidth * -1,
-          opacity: 0,
-          scale: 0.1,
-        })
-        .from("#section_resource .div2 .img1", {
-          y: window.innerWidth * 1,
-          opacity: 0,
-          scale: 0.5,
-        })
-        .from("#section_resource .div2 .label2", {
-          x: window.innerWidth * -1,
-          opacity: 0,
-          scale: 0.1,
-        })
-        .from("#section_resource .div2 .img2", {
-          y: window.innerWidth * 1,
-          opacity: 0,
-          scale: 0.5,
-        })
-        .from("#section_resource .div2 .label3", {
-          x: window.innerWidth * -1,
-          opacity: 0,
-          scale: 0.1,
-        })
-        .from("#section_resource .div2 .img3", {
-          y: window.innerWidth * 1,
-          opacity: 0,
-          scale: 0.5,
-        })
-        .from("#section_resource .div2 .label4", {
-          x: window.innerWidth * -1,
-          opacity: 0,
-          scale: 0.1,
-        })
-        .from("#section_resource .div2 .img4", {
-          y: window.innerWidth * 1,
-          opacity: 0,
-          scale: 0.5,
-        });
+        .from("#section_resource .div1 p", ANIMATIONS.BOTTOM_TO_TOP)
+        .from("#section_resource .div2 .label1", ANIMATIONS.LEFT_TO_RIGHT)
+        .from("#section_resource .div2 .img1", ANIMATIONS.BOTTOM_TO_TOP)
+        .from("#section_resource .div2 .label2", ANIMATIONS.LEFT_TO_RIGHT)
+        .from("#section_resource .div2 .img2", ANIMATIONS.BOTTOM_TO_TOP)
+        .from("#section_resource .div2 .label3", ANIMATIONS.LEFT_TO_RIGHT)
+        .from("#section_resource .div2 .img3", ANIMATIONS.BOTTOM_TO_TOP)
+        .from("#section_resource .div2 .label4", ANIMATIONS.LEFT_TO_RIGHT)
+        .from("#section_resource .div2 .img4", ANIMATIONS.BOTTOM_TO_TOP);
     }, props.mainRef); // <- Scope!
     return () => ctx.revert(); // <- Cleanup!
   }, []);

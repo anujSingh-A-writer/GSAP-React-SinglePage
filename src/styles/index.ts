@@ -13,6 +13,7 @@ export const layout = {
       justifyBetween: "flex flex-col justify-between",
       justifyStart: "flex flex-col justify-start",
       justifyEnd: "flex flex-col justify-end",
+      itemsCenterJustifyBetween: "flex flex-col items-center justify-between",
       itemsCenter: "flex flex-col items-center",
       itemsEnd: "flex flex-col items-end",
       itemEndspaceBetween: "flex flex-col items-end justify-between",
