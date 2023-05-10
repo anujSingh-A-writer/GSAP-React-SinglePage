@@ -9,6 +9,7 @@ import Layout from "./components/layout";
 import Resources from "./components/resources";
 import WelcomeKilt from "./components/welcome";
 import Kilt from "./components/kilt";
+import LandingSection from "./components/landing";
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
@@ -18,12 +19,15 @@ function App() {
     <Layout
       header={<Header />}
       main={
-        <main ref={mainRef} className="bg-black">
-          <Kilt mainRef={mainRef} />
+        <main ref={mainRef}>
+          <LandingSection mainRef={mainRef} />
+          <Kilt />
           <WelcomeKilt mainRef={mainRef} />
           <Resources mainRef={mainRef} />
-          <TeamWriter mainRef={mainRef} />
-          <DigitCover mainRef={mainRef} />
+          <div className="bg-black">
+            <TeamWriter mainRef={mainRef} />
+            <DigitCover mainRef={mainRef} />
+          </div>
         </main>
       }
       footer={<Footer />}

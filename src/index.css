@@ -23,7 +23,7 @@ section {
   justify-content: center;
 }
 
-.banner {
-  background-image: url("./assets/primaryBanner.png");
-  /* background-image: url('./assets/secondaryBanner.jpg'); */
+.banner{
+  /* background-image: url('./assets/banner.jpg'); */
+  background-image: url('./assets/banner3.png');
 }

@@ -16,7 +16,7 @@ const TeamWriter: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
         .timeline({
           scrollTrigger: {
             trigger: "#section_one",
-            start: "top top", //animation start at this point
+            start: "top 10%", //animation start at this point
             end: "+=2000", //animation end at this point
             scrub: 1,
             pin: true,
@@ -59,7 +59,7 @@ const TeamWriter: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
   return (
     <section
       id="section_one"
-      className={`bg-blue-500 text-white overflow-hidden`}
+      className={`bg-blue-500 text-white h-[80vh]`}
     >
       <div
         className={`div1 ${layout.flex.directionCol.justifyStart} gap-10 py-28 pl-28 w-1/2`}
