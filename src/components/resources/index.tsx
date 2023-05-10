@@ -18,7 +18,10 @@ const Resources: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
             pin: true,
           },
         })
-        .from("#section_resource .div1 h1", ANIMATIONS.BOTTOM_TO_TOP)
+        .from("#section_resource .div1 h1", {
+          y: "30vh",
+          scale: 2,
+        })
         .from("#section_resource .div1 p", ANIMATIONS.BOTTOM_TO_TOP)
         .from("#section_resource .div2 .label1", ANIMATIONS.LEFT_TO_RIGHT)
         .from("#section_resource .div2 .img1", ANIMATIONS.BOTTOM_TO_TOP)
