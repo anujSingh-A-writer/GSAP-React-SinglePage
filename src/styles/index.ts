@@ -11,6 +11,7 @@ export const layout = {
     },
     directionCol: {
       justifyBetween: "flex flex-col justify-between",
+      justifyCenter: "flex flex-col justify-center",
       justifyStart: "flex flex-col justify-start",
       justifyEnd: "flex flex-col justify-end",
       itemsCenterJustifyBetween: "flex flex-col items-center justify-between",
