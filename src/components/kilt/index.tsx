@@ -9,7 +9,7 @@ const Kilt: React.FC<{ mainRef: React.MutableRefObject<null> }> = () => {
       id="section_kilt"
       className="relative flex flex-col justify-center items-center"
     >
-      <div className={`h-1/2 w-full -mb-28 bg-white`}></div>
+      <div className={`h-1/2 w-full -mb-28 bg-lime-300`}></div>
       <div
         className={`${layout.flex.directionCol.justifyCenter} h-2/5 py-10 transform -skew-y-6 bg-black`}
       >
