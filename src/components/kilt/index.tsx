@@ -5,9 +5,13 @@ import kiltLogo2 from "./assets/images/kilt2.png";
 
 const Kilt: React.FC<{ mainRef: React.MutableRefObject<null> }> = () => {
   return (
-    <section id="section_kilt" className=" bg-blue-500 relative">
+    <section
+      id="section_kilt"
+      className="relative flex flex-col justify-center items-center"
+    >
+      <div className={`h-1/2 w-full -mb-28 bg-white`}></div>
       <div
-        className={`${layout.flex.directionCol.justifyCenter} h-2/5 py-10 absolute inset-0 transform -skew-y-6 my-56 bg-black`}
+        className={`${layout.flex.directionCol.justifyCenter} h-2/5 py-10 transform -skew-y-6 bg-black`}
       >
         <Marquee>
           <div className="flex">
@@ -22,6 +26,7 @@ const Kilt: React.FC<{ mainRef: React.MutableRefObject<null> }> = () => {
           </div>
         </Marquee>
       </div>
+      <div className={`h-1/2 w-full -mt-28  bg-blue-500`}></div>
     </section>
   );
 };
