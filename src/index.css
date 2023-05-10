@@ -22,5 +22,8 @@ section {
   align-items: center;
   justify-content: center;
 }
-.clip-path-div {
+
+.banner{
+  /* background-image: url('./assets/banner.jpg'); */
+  background-image: url('./assets/banner3.png');
 }
