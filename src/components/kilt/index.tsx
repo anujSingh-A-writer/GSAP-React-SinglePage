@@ -3,13 +3,12 @@ import Marquee from "react-gsap-marquee";
 import kiltLogo1 from "./assets/images/kilt1.png";
 import kiltLogo2 from "./assets/images/kilt2.png";
 
-const Kilt: React.FC<{ mainRef: React.MutableRefObject<null> }> = () => {
+const Kilt = () => {
   return (
     <section
       id="section_kilt"
-      className="relative flex flex-col justify-center items-center"
+      className="relative flex flex-col justify-end items-center bg-transparent "
     >
-      <div className={`h-1/2 w-full -mb-28 bg-lime-300`}></div>
       <div
         className={`${layout.flex.directionCol.justifyCenter} h-2/5 py-10 transform -skew-y-6 bg-black`}
       >

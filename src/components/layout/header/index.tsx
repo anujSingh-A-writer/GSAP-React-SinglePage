@@ -4,7 +4,7 @@ import logo from "../../../assets/kiltxHeaderLogo.png";
 
 const Header = () => {
   return (
-    <header className="px-28 py-12 bg-lime-300">
+    <header className="px-28 py-12 z-20">
       <div
         className={`${layout.flex.directionRow.itemCenterSpaceBetween} h-full`}
       >
