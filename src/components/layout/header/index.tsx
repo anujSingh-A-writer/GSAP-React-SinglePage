@@ -1,6 +1,6 @@
 import { layout } from "../../../styles";
 import { MENU_ITEMS } from "./constants";
-import logo from "../../../assets/kiltx.png";
+import logo from "../../../assets/kiltxHeaderLogo.png";
 
 const Header = () => {
   return (

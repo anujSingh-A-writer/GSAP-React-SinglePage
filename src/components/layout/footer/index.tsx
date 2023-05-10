@@ -1,4 +1,4 @@
-import logo from "../../../assets/kiktX.png";
+import logo from "../../../assets/kiktxFooterLogo.png";
 import { layout } from "../../../styles";
 import { FOOTER_CONTENTS, SOCIAL_LINKS } from "./constants";
 

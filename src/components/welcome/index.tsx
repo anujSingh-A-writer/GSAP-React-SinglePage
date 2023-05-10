@@ -28,18 +28,16 @@ const WelcomeKilt: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
         .from("#section_welcomekilt .div1 p", ANIMATIONS.BOTTOM_TO_TOP)
         .from("#section_welcomekilt .div2", ANIMATIONS.BOTTOM_TO_TOP)
         .from("#section_welcomekilt .div2 h1", {
+          y: 200,
           opacity: 0,
-          scale: 1.5,
-          stagger: 1,
-          delay: 0.2,
-          duration: 1,
+          stagger: { each: 0.5 },
+          scale: 0.3,
         })
         .from("#section_welcomekilt .div2 p", {
+          y: 100,
           opacity: 0,
-          scale: 0.2,
-          delay: 0.2,
-          stagger: 2,
-          duration: 1,
+          stagger: { each: 0.5 },
+          scale: 0.3,
         });
     }, props.mainRef); // <- Scope!
     return () => ctx.revert(); // <- Cleanup!
