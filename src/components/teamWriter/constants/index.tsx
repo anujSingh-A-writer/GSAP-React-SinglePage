@@ -44,4 +44,28 @@ export const PROFILE_LIST = [
     name: "Vishnu",
     url: profile1,
   },
+  {
+    name: "Kuldip",
+    url: profile4,
+  },
+  {
+    name: "Anup",
+    url: profile2,
+  },
+  {
+    name: "Sachin",
+    url: profile5,
+  },
+  {
+    name: "Vishnu",
+    url: profile1,
+  },
+  {
+    name: "Sachin",
+    url: profile5,
+  },
+  {
+    name: "Vishnu",
+    url: profile1,
+  },
 ];
