@@ -4,11 +4,13 @@ import { FOOTER_CONTENTS, SOCIAL_LINKS } from "./constants";
 
 const Footer = () => {
   return (
-    <footer className="footerDiv bg-black px-28 text-white overflow-hidden">
+    <footer className="footerDiv bg-black px-10 text-white overflow-hidden | lg:px-16 | xl:px-20">
       <div className="pb-20 pt-28 mt-28 border-t border-t-gray-300">
-        <div className={layout.flex.directionRow.itemCenterSpaceBetween}>
+        <div
+          className={`${layout.flex.directionRow.itemCenterSpaceBetween} flex-wrap | xl:flex-nowrap`}
+        >
           <div
-            className={`w-1/3 ${layout.flex.directionCol.justifyBetween} gap-10`}
+            className={`w-1/2 ${layout.flex.directionCol.justifyBetween} gap-10 | xl:w-1/3`}
           >
             <img height={200} width={200} alt="logo" src={logo} />
             <p className="text-xl w-3/4">
@@ -21,7 +23,7 @@ const Footer = () => {
           >
             {FOOTER_CONTENTS.map((eachItem) => (
               <div
-                className={`w-1/3 ${layout.flex.directionCol.justifyBetween} gap-6`}
+                className={`w-full ${layout.flex.directionCol.justifyBetween} gap-6`}
               >
                 <h1 className="text-2xl">{eachItem.title}</h1>
                 <ul className="text-xl">
@@ -33,15 +35,19 @@ const Footer = () => {
             ))}
           </div>
           <div
-            className={`w-1/3 ${layout.flex.directionCol.itemEndspaceBetween} gap-10`}
+            className={`w-full mt-10 ${layout.flex.directionCol.itemEndspaceBetween} | xl:w-1/3`}
           >
-            <h1 className="text-2xl">SUBSCRIBE OUR NEWSLETTER</h1>
-            <button className="relative bg-zinc-800 py-8 pl-10 pr-2 rounded-full border border-zinc-400 text-zinc-400 w-full text-left text-lg">
-              Enter your email
-              <span className="absolute bottom-2 top-2 right-2 bg-lime-300 py-6 px-11 rounded-full text-black font-semibold text-xl">
-                Subscribe
-              </span>
-            </button>
+            <div
+              className={`${layout.flex.directionCol.itemEndspaceBetween} gap-10 w-1/2 | xl:w-full`}
+            >
+              <h1 className="text-2xl">SUBSCRIBE OUR NEWSLETTER</h1>
+              <button className="relative bg-zinc-800 py-8 pl-10 pr-2 rounded-full border border-zinc-400 text-zinc-400 w-full text-left text-lg">
+                Enter your email
+                <span className="absolute bottom-2 top-2 right-2 bg-lime-300 py-6 px-11 rounded-full text-black font-semibold text-xl">
+                  Subscribe
+                </span>
+              </button>
+            </div>
           </div>
         </div>
         <div className={`${layout.flex.directionRow.justifyEnd} gap-20 py-10`}>

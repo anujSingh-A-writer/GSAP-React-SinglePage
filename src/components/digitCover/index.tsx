@@ -36,7 +36,7 @@ const DigitCover: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
   return (
     <section
       id="section_digitCover"
-      className={`${layout.flex.directionCol.justifyBetween} bg-lime-300 px-5 h-[60vh] | lg:h-[70vh] | xl:px-28 xl:h-[80vh] `}
+      className={`${layout.flex.directionCol.justifyBetween} bg-lime-300 px-5 h-[60vh] | lg:h-[70vh] lg:px-20 | xl:px-28 xl:h-[80vh] `}
     >
       <div className={`div1 ${layout.flex.directionRow.itemCenter} w-full`}>
         <h1 className="h1digit font-semibold w-3/4 text-[10rem] | 2lg:text-[12rem] 2lg:w-1/2 | xl:text-[14rem] ">
@@ -58,7 +58,7 @@ const DigitCover: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
             learn how to build an Attester business on KILT,
           </p>
         </div>
-        <h1 className="h1digitCover  font-semibold w-1/2  text-[10rem] | 2lg:text-[13rem] | xl:text-[15rem] ">
+        <h1 className="h1digitCover text-right font-semibold w-1/2  text-[10rem] | 2lg:text-[13rem] | xl:text-[15rem] ">
           Cover
         </h1>
       </div>
