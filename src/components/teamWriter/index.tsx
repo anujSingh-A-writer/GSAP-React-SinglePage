@@ -15,39 +15,39 @@ const TeamWriter: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
       gsap
         .timeline({
           scrollTrigger: {
-            trigger: "#section_one",
+            trigger: "#section_teamWriter",
             start: "top 10%", //animation start at this point
             end: "+=2000", //animation end at this point
             scrub: 1,
             pin: true,
           },
         })
-        .from("#section_one h1", {
+        .from("#section_teamWriter h1", {
           y: "70%",
           stagger: {
             each: 1,
           },
         })
-        .from("#section_one .p1", ANIMATIONS.BOTTOM_TO_TOP)
-        .from("#section_one .p2", ANIMATIONS.BOTTOM_TO_TOP)
-        .from("#section_one button", ANIMATIONS.BOTTOM_TO_TOP);
+        .from("#section_teamWriter .p1", ANIMATIONS.BOTTOM_TO_TOP)
+        .from("#section_teamWriter .p2", ANIMATIONS.BOTTOM_TO_TOP)
+        .from("#section_teamWriter button", ANIMATIONS.BOTTOM_TO_TOP);
       // Right Div
       gsap
         .timeline({
           scrollTrigger: {
-            trigger: "#section_one .div1",
+            trigger: "#section_teamWriter .div1",
             start: "top top", //animation start at this point
             end: "bottom top", //animation end at this point
             scrub: 1,
           },
         })
         .fromTo(
-          getImageSelectorIds(12, "section_one", "imgdiv1"),
+          getImageSelectorIds(12, "section_teamWriter", "imgdiv1"),
           { y: "100%" },
           { y: "-100%", duration: 5, ease: "linear" }
         )
         .fromTo(
-          getImageSelectorIds(12, "section_one", "imgdiv2"),
+          getImageSelectorIds(12, "section_teamWriter", "imgdiv2"),
           { y: "-100%" },
           { y: "100%", duration: 5, ease: "linear" }
         );
@@ -58,26 +58,28 @@ const TeamWriter: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
 
   return (
     <section
-      id="section_one"
+      id="section_teamWriter"
       className={`bg-blue-500 text-white h-[80vh]`}
     >
       <div
-        className={`div1 ${layout.flex.directionCol.justifyStart} gap-10 py-28 pl-28 w-1/2`}
+        className={`div1 ${layout.flex.directionCol.justifyStart} gap-10 py-28 pl-14 w-1/2 | lg:pl-20 | xl:pl-28`}
       >
-        <h1 className="text-8xl font-semibold">Kilt Team Writer</h1>
+        <h1 className="text-5xl font-semibold | 2lg:text-6xl | xl:text-7xl">
+          Kilt Team Writer
+        </h1>
         <div className={`${layout.flex.directionCol.justifyStart} gap-5`}>
-          <p className="p1 text-2xl">
+          <p className="p1 text-lg | lg:text-xl | xl:text-2xl">
             With backgrounds in software media academia, government, enterprise
             startups and of course blockchain the team shares a passion for self
             sovereign identity and privacy.
           </p>
-          <p className="p2 text-2xl">
+          <p className="p2 text-lg | lg:text-xl | xl:text-2xl">
             Explore KILT's identity components, download the Javascript SDK,
             learn how to build an Attester business on KILT, or sign up for a
             hackathon to colla,
           </p>
         </div>
-        <button className="w-fit bg-lime-300 text-black font-semibold px-8 py-4 rounded-lg text-xl">
+        <button className="w-fit bg-lime-300 text-black font-semibold  rounded-lg px-6 py-3 text-lg | xl:px-8 xl:py-4 xl:text-xl">
           Learn more
         </button>
       </div>
@@ -91,10 +93,10 @@ const TeamWriter: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
             <div
               className={`img${index + 1} ${
                 layout.flex.directionRow.itemJustifyCenter
-              }  overflow-hidden rounded-full border-4 border-white w-60 h-60 m-5 transform rotate-[-60deg]`}
+              }  overflow-hidden rounded-full border-4 border-white w-40 h-40 xl:w-60 xl:h-60 m-5 transform rotate-[-60deg]`}
             >
               <img
-                className="rounded-full w-60 h-50 object-cover"
+                className="rounded-full w-40 h-40 xl:w-60 xl:h-60 object-cover"
                 src={profile.url}
                 alt="profile"
               />
@@ -106,10 +108,10 @@ const TeamWriter: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
             <div
               className={`img${index + 1} ${
                 layout.flex.directionRow.itemJustifyCenter
-              }  overflow-hidden rounded-full border-4 border-white w-60 h-60 m-5 transform rotate-[-60deg]`}
+              }  overflow-hidden rounded-full border-4 border-white w-40 h-40 xl:w-60 xl:h-60 m-5 transform rotate-[-60deg]`}
             >
               <img
-                className="rounded-full w-60 h-50"
+                className="rounded-full w-40 h-40 xl:w-60 xl:h-60 object-cover"
                 src={profile.url}
                 alt="profile"
               />
