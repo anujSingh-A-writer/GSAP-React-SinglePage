@@ -38,22 +38,24 @@ const Resources: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
   return (
     <section
       id="section_resource"
-      className={`${layout.flex.directionCol.itemsCenter} gap-20 bg-blue-100 py-20 overflow-hidden`}
+      className={`${layout.flex.directionCol.itemsCenter} bg-blue-100 lg:py-20 overflow-hidden h-full | lg:gap-20 lg:h-screen`}
     >
       <div
         className={`div1 ${layout.flex.directionCol.itemsJustifyCenter} w-full gap-8 h-1/4`}
       >
-        <h1 className="text-6xl font-semibold">Resources for Builders</h1>
-        <p className="text-2xl w-1/2 px-5 text-center">
+        <h1 className="font-semibold text-3xl | sm:text-4xl lg:text-5xl xl:text-6xl">
+          Resources for Builders
+        </h1>
+        <p className="text-2xl w-11/12 px-5 text-center | lg:w-2/3 | xl:w-1/2">
           Explore KILT's identity components, download the Javascript SDK, learn
           how to build an Attester business on KILT, or sign up for a hackathon
           to collaborate with other developers
         </p>
       </div>
       <div
-        className={`div2 ${layout.flex.directionRow.itemCenterSpaceBetween} w-[85%] h-3/4 `}
+        className={`div2 flex flex-col items-center justify-between w-11/12 h-3/4 gap-20 | lg:flex-row lg:w-[85%] lg:gap-0`}
       >
-        <div className="w-1/2">
+        <div className="w-full lg:w-1/2">
           <ul>
             {RESOURCE_LIST.map((eachResource, index) => (
               <li
@@ -68,7 +70,7 @@ const Resources: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
           </ul>
         </div>
         <div
-          className={`${layout.flex.directionRow.itemJustifyCenter} content-around w-1/2 h-full flex-wrap`}
+          className={`${layout.flex.directionRow.itemJustifyCenter} content-around  h-full w-11/12 flex-wrap | lg:w-1/2`}
         >
           {RESOURCE_LIST.map((eachResource, index) => (
             <div
