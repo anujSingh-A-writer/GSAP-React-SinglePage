@@ -4,17 +4,15 @@ import WelcomeCard from "./Card";
 import { WELCOME_CARD_DETAILS } from "./constants";
 import { useLayoutEffect, useRef } from "react";
 import { ANIMATIONS } from "../resources/constants";
+import { WelcomeProps } from "./types";
 
-const WelcomeKilt: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
-  props
-) => {
+const WelcomeKilt: React.FC<WelcomeProps> = (props) => {
   const sectionRef = useRef(null);
   const welcomeTitleRef = useRef(null);
   const welcomeDescRef = useRef(null);
   const welcomeCardDivRef = useRef(null);
 
   const revealRefs = useRef<string[]>([]);
-  revealRefs.current = [];
   const addToRefs = (el: any) => {
     if (el && !revealRefs.current.includes(el)) {
       revealRefs.current.push(el);
@@ -40,12 +38,7 @@ const WelcomeKilt: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
       tl.from(welcomeCardDivRef.current, ANIMATIONS.BOTTOM_TO_TOP);
 
       revealRefs.current.forEach((el: any) => {
-        tl.from(el.current, {
-          y: 200,
-          opacity: 0,
-          stagger: { each: 0.5 },
-          scale: 0.3,
-        }).from(el, {
+        tl.from(el, {
           y: 100,
           opacity: 0,
           stagger: { each: 0.5 },
