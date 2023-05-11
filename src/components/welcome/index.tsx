@@ -46,15 +46,15 @@ const WelcomeKilt: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
   return (
     <section
       id="section_welcomekilt"
-      className="bg-blue-500 text-white flex-col justify-between py-10 px-28 gap-10"
+      className="bg-blue-500 text-white flex-col justify-between p-5 gap-10 h-full px-5 | sm:p-10 | lg:py-10 lg:px-18 lg:h-screen | xl:px-28"
     >
       <div
-        className={`div1 ${layout.flex.directionCol.justifyStart} w-full gap-8`}
+        className={`div1 gap-5 ${layout.flex.directionCol.justifyStart} w-full | lg:gap-8`}
       >
-        <h1 className="text-6xl font-semibold">
+        <h1 className="text-3xl font-semibold | sm:text-4xl | md:text-5xl | lg:text-6xl ">
           Welcome to <span className="text-lime-300">KILT website</span>
         </h1>
-        <p className="text-2xl w-3/5">
+        <p className="text-xl w-full | md:w-2/3 md:text-2xl | lg:w-3/5">
           Start building your digital identity by getting your
           <span className="text-lime-300"> KILT DID </span>
           (decentrailzed identifier) then adding your credentials like your
@@ -62,7 +62,7 @@ const WelcomeKilt: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
         </p>
       </div>
       <div
-        className={`div2 ${layout.flex.directionRow.itemJustifyCenter} h-full gap-10`}
+        className={`div2 h-full gap-5 flex flex-col items-center justify-between | md:gap-6 |lg:flex lg:flex-row lg:items-center lg:justify-between | xl:gap-10`}
       >
         {WELCOME_CARD_DETAILS.map((eachItem) => (
           <WelcomeCard
