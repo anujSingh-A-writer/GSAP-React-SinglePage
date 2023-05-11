@@ -33,10 +33,12 @@ const LandingSection: React.FC<{
       className={`h-[200vh] bg-lime-300 bg-cover bg-center -mb-72 -mt-40 z-10 banner text-black`}
     >
       <div className={`${layout.flex.directionCol.itemsCenter}`}>
-        <h1 className="text-[11rem]">
+        <h1 className="text-6xl | xs:text-7xl | sm:text-8xl | md:text-[10rem] | lg:text-[11rem]">
           ID<span className="text-white">ENTI</span>TY
         </h1>
-        <h3 className="text-white text-4xl font-semibold">Decentralized</h3>
+        <h3 className="text-white text-xl font-semibold | xs:text-2xl| sm:text-3xl | md:text-4xl ">
+          Decentralized
+        </h3>
       </div>
     </section>
   );

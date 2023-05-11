@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+body,
+html {
   margin: 0;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -23,7 +25,7 @@ section {
   justify-content: center;
 }
 
-.banner{
+.banner {
   /* background-image: url('./assets/banner.jpg'); */
-  background-image: url('./assets/banner3.png');
+  background-image: url("./assets/banner3.png");
 }
