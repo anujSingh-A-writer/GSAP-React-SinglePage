@@ -11,8 +11,9 @@ import WelcomeKilt from "./components/welcome";
 import Kilt from "./components/kilt";
 import LandingSection from "./components/landing";
 
+gsap.registerPlugin(ScrollTrigger);
+
 function App() {
-  gsap.registerPlugin(ScrollTrigger);
   const mainRef = useRef(null);
 
   return (
