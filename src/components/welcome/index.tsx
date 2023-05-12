@@ -75,7 +75,7 @@ const WelcomeKilt: React.FC<WelcomeProps> = (props) => {
       </div>
       <div
         ref={welcomeCardDivRef}
-        className={`h-full gap-5 flex flex-col items-center justify-between | md:gap-6 |lg:flex lg:flex-row lg:items-center lg:justify-between | xl:gap-10`}
+        className={`h-full gap-5 flex flex-col items-center justify-between | md:gap-6 | lg:flex lg:flex-row lg:items-center lg:justify-between | xl:gap-10`}
       >
         {WELCOME_CARD_DETAILS.map((eachItem) => (
           <WelcomeCard
