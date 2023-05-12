@@ -30,9 +30,10 @@ const WelcomeKilt: React.FC<WelcomeProps> = (props) => {
         },
       });
       tl.from(welcomeTitleRef.current, {
+        opacity: 0,
         y: "30vh",
-        xPercent: 50,
-        scale: 2,
+        x: "30vh",
+        scale: 1,
       });
       tl.from(welcomeDescRef.current, ANIMATIONS.BOTTOM_TO_TOP);
       tl.from(welcomeCardDivRef.current, ANIMATIONS.BOTTOM_TO_TOP);

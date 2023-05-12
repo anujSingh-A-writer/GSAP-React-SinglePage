@@ -38,7 +38,7 @@ const DigitCover: React.FC<{ mainRef: React.MutableRefObject<null> }> = (
   return (
     <section
       ref={sectionRef}
-      className={`${layout.flex.directionCol.justifyBetween} bg-lime-300 px-5 h-[60vh] | lg:h-[70vh] lg:px-20 | xl:px-28 xl:h-[80vh] `}
+      className={`${layout.flex.directionCol.itemsJustifyCenter} bg-lime-300 px-5 h-[80vh] | lg:px-20 | xl:px-28 py-28`}
     >
       <div
         ref={sectionDiv1Ref}

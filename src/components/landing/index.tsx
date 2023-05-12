@@ -5,7 +5,7 @@ import { LandingProps } from "./type";
 import { gsap } from "gsap";
 
 const LandingSection: React.FC<LandingProps> = (props) => {
-  const {  mainRef } = props;
+  const { mainRef } = props;
 
   const sectionRef = useRef(null);
   const h1Ref = useRef(null);
@@ -35,18 +35,18 @@ const LandingSection: React.FC<LandingProps> = (props) => {
   return (
     <section
       ref={sectionRef}
-      className={`h-[200vh] bg-lime-300 bg-cover bg-center -mb-72 -mt-40 z-10 banner text-black`}
+      className={`h-[200vh] bg-white bg-cover bg-center -mb-80 -mt-40 z-10 banner text-black`}
     >
-      <div className={`${layout.flex.directionCol.itemsCenter} gap-28`}>
+      <div className={`${layout.flex.directionCol.itemsCenter} mt-16`}>
         <h1
           ref={h1Ref}
-          className="text-6xl | xs:text-7xl | sm:text-8xl | md:text-[10rem] | lg:text-[11rem]"
+          className="text-6xl | xs:text-7xl | sm:text-8xl | md:text-[10rem] | lg:text-[11rem] "
         >
           ID<span className="text-white">ENTI</span>TY
         </h1>
         <h3
           ref={h3Ref}
-          className="text-white text-xl font-semibold | xs:text-2xl| sm:text-3xl | md:text-4xl "
+          className="text-white text-xl font-semibold mt-20 | xs:text-2xl| sm:text-3xl | md:text-4xl"
         >
           Decentralized
         </h3>
