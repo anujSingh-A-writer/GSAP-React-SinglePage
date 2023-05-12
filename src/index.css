@@ -29,3 +29,7 @@ section {
   /* background-image: url('./assets/banner.jpg'); */
   background-image: url("./assets/banner3.png");
 }
+
+.clip-path-div {
+  clip-path: polygon(0 0, 100% 0, 98% 100%, 2% 100%);
+}
