@@ -6,10 +6,10 @@ import {
 } from "react-icons/fa";
 export const FOOTER_CONTENTS = [
   {
-    title: "DICOVER",
+    title: "DISCOVER",
     values: [
       {
-        name: "Artst",
+        name: "Artist",
         navigateTo: "",
       },
       {
@@ -23,7 +23,7 @@ export const FOOTER_CONTENTS = [
     ],
   },
   {
-    title: "GENEATE",
+    title: "GENERATE",
     values: [
       {
         name: "Face Potrait",
