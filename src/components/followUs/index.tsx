@@ -3,7 +3,7 @@ import { FollowUsProps } from "./types";
 import { useLayoutEffect, useRef } from "react";
 import { layout } from "../../styles";
 import { BsArrowRightCircleFill } from "react-icons/bs";
-import { TEAM_LIST } from "./constants";
+import { FOLLOW_DETAILS_LIST } from "./constants";
 
 const FollowUs: React.FC<FollowUsProps> = ({ mainRef }) => {
   const sectionRef = useRef(null);
@@ -106,7 +106,7 @@ const FollowUs: React.FC<FollowUsProps> = ({ mainRef }) => {
             <div className={`${layout.flex.directionCol.justifyStart} w-1/2`}>
               <h1 className="text-4xl font-semibold">Follow Us Team</h1>
               <ul className="text-xl py-5">
-                {TEAM_LIST.map((eachItem) => (
+                {FOLLOW_DETAILS_LIST.map((eachItem) => (
                   <li
                     className={`${layout.flex.directionRow.itemsCenterJustifyStart} py-2 gap-3 `}
                   >
