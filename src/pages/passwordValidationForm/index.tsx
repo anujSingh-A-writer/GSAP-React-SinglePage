@@ -61,8 +61,6 @@ const PasswordValidationForm = () => {
   };
 
   const onFinish = (values: any) => {
-    console.log(values);
-
     setSuccessMsg(
       <h3>
         The password has been changed successfully, your new password is{" "}
