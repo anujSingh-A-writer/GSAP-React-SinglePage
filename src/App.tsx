@@ -11,7 +11,6 @@ import WelcomeKilt from "./components/welcome";
 import Kilt from "./components/kilt";
 import LandingSection from "./components/landing";
 import FollowUs from "./components/followUs";
-import PasswordValidationForm from "./pages/passwordValidationForm";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,10 +19,10 @@ function App() {
 
   return (
     <Layout
-      header={<></>}
+      header={<Header />}
       main={
         <main ref={mainRef}>
-          {/* <LandingSection mainRef={mainRef} />
+          <LandingSection mainRef={mainRef} />
           <Kilt />
           <WelcomeKilt mainRef={mainRef} />
           <Resources mainRef={mainRef} />
@@ -31,11 +30,10 @@ function App() {
             <FollowUs mainRef={mainRef} />
             <TeamWriter mainRef={mainRef} />
             <DigitCover mainRef={mainRef} />
-          </div> */}
-          <PasswordValidationForm />
+          </div>
         </main>
       }
-      footer={<></>}
+      footer={<Footer />}
     />
   );
 }
