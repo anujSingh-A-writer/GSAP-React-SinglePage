@@ -11,6 +11,7 @@ import WelcomeKilt from "./components/welcome";
 import Kilt from "./components/kilt";
 import LandingSection from "./components/landing";
 import FollowUs from "./components/followUs";
+import { HomePage } from "./pages/home";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,15 +23,7 @@ function App() {
       header={<Header />}
       main={
         <main ref={mainRef}>
-          <LandingSection mainRef={mainRef} />
-          <Kilt />
-          <WelcomeKilt mainRef={mainRef} />
-          <Resources mainRef={mainRef} />
-          <div className="bg-black">
-            <FollowUs mainRef={mainRef} />
-            <TeamWriter mainRef={mainRef} />
-            <DigitCover mainRef={mainRef} />
-          </div>
+          <HomePage mainRef={mainRef}/>
         </main>
       }
       footer={<Footer />}
